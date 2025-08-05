@@ -7,3 +7,4 @@ A project where I render a restaurant page using webpack and package.json while 
 3. Using bundlers (Webpack)
 4. Running a webpack dev server
 5. Rendering DOM elements using only Javascript
+6. Deploying dist directory to its own branch
