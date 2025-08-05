@@ -289,3 +289,156 @@ function createMenu () {
 }
 
 export default createMenu;
+
+// ALT CODE I SHOULD USE TO AVOID REDUNDANCY
+/*
+import dogImage from './images/dog.png';
+
+function createMenu() {
+    const content = document.getElementById('content');
+    content.textContent = '';
+
+    // Header
+    const headline = document.createElement('div');
+    headline.classList.add('headline');
+
+    const title = document.createElement('div');
+    title.classList.add('title');
+
+    const logo = document.createElement('img');
+    logo.src = dogImage;
+    logo.id = 'header-img';
+
+    const text = document.createElement('span');
+    text.id = 'header-text';
+    text.textContent = 'Menu';
+
+    title.appendChild(logo);
+    title.appendChild(text);
+    headline.appendChild(title);
+    content.appendChild(headline);
+
+    // Menu Data
+    const menuSections = [
+        {
+            class: 'cakes',
+            heading: 'Cakes',
+            items: [
+                {
+                    name: 'Red Velvet Cake',
+                    desc: 'A slice of vanilla cake layered with cocoa powder and red food coloring with strawberries on top.',
+                    price: '$3'
+                },
+                {
+                    name: 'Tiramisu Cake',
+                    desc: 'A slice of vanilla cake soaked in coffee and layered with mascarpone cream.',
+                    price: '$4'
+                },
+                {
+                    name: 'Chocolate Mousse Cake',
+                    desc: 'A slice of chocolate cake with layers of chocolate mousse finished with a chocolate ganache.',
+                    price: '$5'
+                }
+            ]
+        },
+        {
+            class: 'donuts',
+            heading: 'Donuts',
+            items: [
+                {
+                    name: 'Sugar Mochi Donut',
+                    desc: 'A mochi donut with sugar on top.',
+                    price: '$6'
+                },
+                {
+                    name: 'Boston Cream Donut',
+                    desc: 'A donut filled with cream and chocolate frosting on top.',
+                    price: '$5'
+                },
+                {
+                    name: 'Pink Frosted Sprinkled Donut',
+                    desc: 'A donut with strawberry frosting and sprinkles on top.',
+                    price: '$5'
+                }
+            ]
+        },
+        {
+            class: 'croissants',
+            heading: 'Croissants',
+            items: [
+                {
+                    name: 'Almond Croissant',
+                    desc: 'A croissant topped with almond cream and sliced almonds.',
+                    price: '$6'
+                },
+                {
+                    name: 'Strawberry Croissant',
+                    desc: 'A croissant filled with cream and strawberries with powdered sugar on top.',
+                    price: '$6'
+                },
+                {
+                    name: 'Chocolate Croissant',
+                    desc: 'A croissant filled with chocolate cream and chocolate drizzle on top.',
+                    price: '$6'
+                }
+            ]
+        }
+    ];
+
+    // Helper to create menu section
+    function createSection(section) {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.classList.add(section.class);
+
+        const heading = document.createElement('div');
+        heading.classList.add(`${section.class}-heading`);
+        heading.textContent = section.heading;
+
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add(`${section.class}-content`);
+
+        section.items.forEach(item => {
+            contentDiv.appendChild(createMenuItem(item, section.class));
+        });
+
+        sectionDiv.appendChild(heading);
+        sectionDiv.appendChild(contentDiv);
+        return sectionDiv;
+    }
+
+    // Helper to create menu item
+    function createMenuItem(item, sectionClass) {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add(`${sectionClass.slice(0, -1)}-item`);
+
+        const name = document.createElement('h3');
+        name.classList.add(`${sectionClass.slice(0, -1)}-item-name`);
+        name.textContent = item.name;
+
+        const desc = document.createElement('p');
+        desc.classList.add(`${sectionClass.slice(0, -1)}-item-desc`);
+        desc.textContent = item.desc;
+
+        const price = document.createElement('p');
+        price.classList.add(`${sectionClass.slice(0, -1)}-item-price`);
+        price.textContent = item.price;
+
+        const img = document.createElement('div');
+        img.classList.add(`${sectionClass.slice(0, -1)}-item-img`);
+
+        itemDiv.appendChild(name);
+        itemDiv.appendChild(desc);
+        itemDiv.appendChild(price);
+        itemDiv.appendChild(img);
+
+        return itemDiv;
+    }
+
+    // Add sections to content
+    menuSections.forEach(section => {
+        content.appendChild(createSection(section));
+    });
+}
+
+export default createMenu;
+*/
